@@ -1,0 +1,21 @@
+# Dependency directories
+*/node_modules/
+
+# Local coverage
+*/coverage
+
+# local build
+*/dist
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

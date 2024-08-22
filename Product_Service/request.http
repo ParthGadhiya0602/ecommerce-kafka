@@ -1,6 +1,17 @@
-POST http://localhost:8000/product
-Content-type: application/json
+# Install rest client/Thunder client VS code extension
 
-{
-    "name": "Sampkle"
-}
+1. Empty Body
+POST http://localhost:8000/product
+Content-type: "application/json"
+
+{}
+
+
+# 2.. Empty Body
+
+# POST http://localhost:8000/product
+# Content-type: application/json
+
+# {
+#     "name": "Sample"
+# }

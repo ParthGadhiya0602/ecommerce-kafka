@@ -5,10 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-// app.use("/", (req, res) => {
-//   res.json({ msg: "message" });
-// });
-
-app.use("/product", productRouter);
+app.use("/", productRouter);
 
 export default app;

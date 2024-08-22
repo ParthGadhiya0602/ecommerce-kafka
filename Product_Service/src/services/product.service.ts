@@ -1,19 +1,30 @@
 import { IProductRepository } from "../interface/productRepository.interface";
+import { Product } from "../models/product.model";
 export class ProductService {
   private _repository: IProductRepository;
   constructor(repository: IProductRepository) {
     this._repository = repository;
   }
 
-  async createProduct(input: any) {
+  async createProduct(input: any): Promise<Product> {
     const data = await this._repository.create(input);
+    return data;
   }
 
-  updateProduct(input: any) {}
+  async updateProduct(input: any): Promise<Product> {
+    const data = await this._repository.update(input);
+    return data;
+  }
 
-  getProducts(limit: number, offset: number) {}
+  async getProducts(limit: number, offset: number): Promise<Product[]> {
+    const data = await this._repository.find();
+    return data;
+  }
 
-  getProduct(id: number) {}
+  async getProduct(id: number): Promise<Product | null> {
+    const data = await this._repository.findOne(id);
+    return data;
+  }
 
   deleteProduct(id: number) {}
 }
